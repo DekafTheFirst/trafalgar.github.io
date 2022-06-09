@@ -32,6 +32,7 @@
 
 .landing-page {
     height: 100vh;
+    margin-bottom: 20px;
 }
 
 .hero .heading {
@@ -87,6 +88,7 @@
 .our-services {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .our-services .text-center p{
     width: 70%;
@@ -99,6 +101,7 @@
     margin-top: 40px;
     gap: 15px;
     margin: 30px auto;
+    position: relative;
 } 
 
 
@@ -112,6 +115,7 @@
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.8);
     border-radius: 20px;
     margin: auto;
+    z-index: 2;
 }
 
 .services .card-body {
@@ -133,17 +137,22 @@
     height: 90px;
 }
 
-.services .illustration {
+.heading-our-services {
+    z-index: 2;
+}
+
+.our-services .illustration {
     position: absolute;
     left: 0;
+    top: 150px;
     z-index: 0;
-    width: -webkit-fill-available
+    max-width: 100%;
 }
 
 .services .polka-our-services {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 200px;
+    right: -30px;
 }
 
 .my-btn{
@@ -153,6 +162,15 @@
     margin: 7px auto;
     padding: 8px 25px;
     display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.my-btn:hover{
+    background-color: #458FF6;
+    transition: background-color 100ms linear ; 
+    color: #fff;
 }
 
 
@@ -209,7 +227,7 @@
 .swiper-slide {
     background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
     border-radius: 24px;
-    padding: 80px;
+    padding: 20px;
     margin: 5px;
 }
 
@@ -258,21 +276,59 @@
 }
 
 .swiper-nav {
-    margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    position: relative;
+    height: 50px;
 }
 
 
-.swiper-pagination, .swiper-button-prev, .swiper-button-next {
+
+.swiper-pagination {
     position: static !important;
 }
 
+.prev-wrapper, .next-wrapper {
+    display: flex;
+    position: relative;
+}
 
-/* .swiper-button-prev {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
-} */
+.prev-wrapper {
+    justify-content: end;
+}
+
+.next-wrapper {
+    justify-content: start;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    
+} 
+
+.swiper-button-next {
+    background-image: url(./images/icons/next.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-prev {
+  background-image: url(./images/icons/back.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+
+
+
+
+  
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+  
+}
 
 
 .swiper-pagination {
@@ -365,15 +421,23 @@
 
 
 /* Footer */
+.footer-wrapper {
+    padding-top: 50px;
+}
 footer{
     background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
     padding: 40px;
     position: relative;
-    overflow: hidden;
+    overflow-y: visible;
 }
 
 footer * {
     color: #fff;
+}
+
+footer p{
+    font-weight: 300;
+    font-size: 16px;
 }
 
 footer .write-up {
@@ -423,12 +487,21 @@ footer .footer-links .row{
 }
 
 footer .polka-footer {
+    height: 90px;
     position: absolute;
     max-width: 100%;
-    bottom: -30px;
-    left: -30px;
+    bottom: 0px;
+    left: -10px;
 }
 
+
+footer .polka-footer-2 {
+    position: absolute;
+    max-width: 100%;
+    top: -60px;
+    right: 30px;
+    z-index: 20;
+}
 /* Tablet */
 @media screen and (min-width: 576px) {
     nav .container-fluid, .hero .container-fluid, .more-info .container-fluid, .reviews {
@@ -458,6 +531,8 @@ footer .polka-footer {
     .services{
         grid-template-columns: repeat(2, 280px);
     } 
+
+    
 
     .swiper-slide{
         padding: 10px;
@@ -512,6 +587,8 @@ footer .polka-footer {
         width: initial;
     }
 
+    
+
     .more-info *{
         text-align: start;
     }
@@ -551,6 +628,12 @@ footer .polka-footer {
         grid-template-columns: repeat(3, 280px);
         padding: 5px 90px;
     } 
+
+    .services .polka-our-services {
+        position: absolute;
+        top: 40%;
+        right: 0;
+    }
 
     .articles {
         grid-template-columns: repeat(3, 280px);

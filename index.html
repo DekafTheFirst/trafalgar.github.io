@@ -18,7 +18,7 @@
     </head>
     <body>
       <section class="landing-page">
-        <nav class="navbar navbar-expand-sm navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./images/logo.png"/></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,12 +60,13 @@
       </section>
       
       <section class="our-services">
-        <div class="text-center">
+        <img src="./images/svg-1.svg" alt="" class="illustration">
+
+        <div class="text-center heading-our-services">
           <h2>Our services</h2>
           <p>We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
         </div>
         <div class="services">
-          <img src="./images/svg-1.svg" alt="" class="illustration">
           <div class="card">
             <img src="./images/search-doctor.png" alt="">
             <div class="card-body">
@@ -150,9 +151,9 @@
       <section class="reviews">
         <div class="container-fluid">
           <h2 class>What our customers are saying</h2>
-          <img src="./images/polka-dot-element.svg" class="polka-reviews"alt="">
+          
           <div class="swiper mySwiper">
-            
+            <img src="./images/polka-dot-element.svg" class="polka-reviews" alt="">
 
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -229,10 +230,15 @@
             </div>
           </div>
           <div class="swiper-nav">
-            <div class="swiper-button-prev"></div>
-
+            <div class="prev-wrapper">  
+              <div class="swiper-button-prev"></div>
+            </div>
+                      
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
+            
+            <div class="next-wrapper">
+              <div class="swiper-button-next"></div>
+            </div>
           </div>
           
         
@@ -286,47 +292,49 @@
         </div>
         
       </section>
-
-      <footer>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col col-12 col-md-5 write-up">
-              <a class="navbar-brand-footer" href="#"><img src="./images/logo.png"/></a>
-              <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online 
-                for everyone</p>
-              <p class="m-0 mt-auto d-block">©Trafalgar PTY LTD 2020. All rights reserved</p>
-            </div>
-            <div class="col col-12 col-md-7 footer-links">
-              <div class="row">
-                <div class="footer-link-wrapper col col-6 col-md-4">
-                  <h5>Company</h5>
-                  <a href="#" class="footer-link">About</a>
-                  <a href="#" class="footer-link">Testimonials</a>
-                  <a href="#" class="footer-link">Find a doctor</a>
-                  <a href="#" class="footer-link">Apps</a>
-                </div>
-                <div class="footer-link-wrapper col col-6 col-md-4">
-                  <h5>Region</h5>
-                  <a href="#" class="footer-link">Indonesia</a>
-                  <a href="#" class="footer-link">Singapore</a>
-                  <a href="#" class="footer-link">Hongkong</a>
-                  <a href="#" class="footer-link">Canada</a>
-                </div>
-                <div class="footer-link-wrapper col col-6 col-md-4">
-                  <h5>Help</h5>
-                  <a href="#" class="footer-link">Help center</a>
-                  <a href="#" class="footer-link">Contact support</a>
-                  <a href="#" class="footer-link">Instructions</a>
-                  <a href="#" class="footer-link">How it works</a>
-                </div>
+      
+        <footer>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-12 col-md-5 write-up">
+                <a class="navbar-brand-footer" href="#"><img src="./images/logo.png"/></a>
+                <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online 
+                  for everyone</p>
+                <p class="m-0 mt-auto d-block">©Trafalgar PTY LTD 2020. All rights reserved</p>
               </div>
-              
+              <div class="col col-12 col-md-7 footer-links">
+                <div class="row">
+                  <div class="footer-link-wrapper col col-6 col-md-4">
+                    <h5>Company</h5>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Testimonials</a>
+                    <a href="#" class="footer-link">Find a doctor</a>
+                    <a href="#" class="footer-link">Apps</a>
+                  </div>
+                  <div class="footer-link-wrapper col col-6 col-md-4">
+                    <h5>Region</h5>
+                    <a href="#" class="footer-link">Indonesia</a>
+                    <a href="#" class="footer-link">Singapore</a>
+                    <a href="#" class="footer-link">Hongkong</a>
+                    <a href="#" class="footer-link">Canada</a>
+                  </div>
+                  <div class="footer-link-wrapper col col-6 col-md-4">
+                    <h5>Help</h5>
+                    <a href="#" class="footer-link">Help center</a>
+                    <a href="#" class="footer-link">Contact support</a>
+                    <a href="#" class="footer-link">Instructions</a>
+                    <a href="#" class="footer-link">How it works</a>
+                  </div>
+                </div>
+                
+              </div>
             </div>
           </div>
-        </div>
-        <img src="./images/polka-dot-element.svg" class="polka-footer"alt="">
-
-      </footer>
+          <img src="./images/polka-dot-element.svg" class="polka-footer"alt="">
+          <img src="./images/polka-dot-element.svg" class="polka-footer-2"alt="">
+  
+        </footer>
+      
         
         <script src="script.js"></script>
         <!-- JavaScript Bundle with Popper -->
